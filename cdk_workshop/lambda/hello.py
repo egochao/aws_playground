@@ -6,5 +6,5 @@ def handler(event, context):
     return {
         "statusCode": 200,
         "headers": {"Content-Type": "text/plain"},
-        "body": "Good Afternoon Bac. {}\n".format(event["path"]),
+        "body": "Good Afternoon Bac. You build your first cdk app {}\n".format(event["path"]),
     }
