@@ -1,6 +1,7 @@
-from aws_cdk import aws_apigateway as apigw, aws_iam as iam, aws_ssm as ssm, Stack
+from aws_cdk import aws_apigateway as apigw, aws_ssm as ssm, Stack
 from constructs import Construct
 import aws_cdk as cdk
+
 
 class APIStack(Stack):
     def __init__(self, scope: Construct, id: str, **kwargs) -> None:
