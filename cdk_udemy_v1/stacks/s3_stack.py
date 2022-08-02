@@ -1,4 +1,4 @@
-from aws_cdk import aws_ec2 as ec2, aws_ssm as ssm, aws_s3 as s3, Stack
+from aws_cdk import aws_ssm as ssm, aws_s3 as s3, Stack
 import aws_cdk as cdk
 
 from constructs import Construct
@@ -20,7 +20,7 @@ class S3Stack(Stack):
             encryption=s3.BucketEncryption.S3_MANAGED,
             bucket_name=f"{account_id}-{env_name}-lambda-deploy-packages",
             block_public_access=s3.BlockPublicAccess.BLOCK_ALL,
-            removal_policy=cdk.RemovalPolicy.RETAIN,
+            removal_policy=cdk.RemovalPolicy.DESTROY,
         )
 
         ssm.StringParameter(
