@@ -18,11 +18,11 @@ class CognitoStack(Stack):
             schema=[{"attributeDataType": "String", "name": "param1", "mutable": True}],
             policies=cognito.CfnUserPool.PoliciesProperty(
                 password_policy=cognito.CfnUserPool.PasswordPolicyProperty(
-                    minimum_length=10,
-                    require_lowercase=True,
-                    require_numbers=True,
+                    minimum_length=8,
+                    require_lowercase=False,
+                    require_numbers=False,
                     require_symbols=False,
-                    require_uppercase=True,
+                    require_uppercase=False,
                 )
             ),
         )
