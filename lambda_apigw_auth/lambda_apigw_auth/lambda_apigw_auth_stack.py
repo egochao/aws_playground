@@ -4,6 +4,7 @@ from aws_cdk import (
     aws_lambda as _lambda,
     aws_apigateway as apigw,
 )
+from aws_cdk import RemovalPolicy
 
 import aws_cdk as cdk
 from constructs import Construct
@@ -15,7 +16,12 @@ class LambdaApigwAuthStack(Stack):
 
         # DynamoDB Table
         table = dynamo_db.Table(
-            self, "Hits", partition_key=dynamo_db.Attribute(name="path", type=dynamo_db.AttributeType.STRING)
+            self,
+            "Hits",
+            partition_key=dynamo_db.Attribute(name="path", type=dynamo_db.AttributeType.STRING),
+            encryption=dynamo_db.TableEncryption.AWS_MANAGED,
+            removal_policy=RemovalPolicy.DESTROY,
+            read_capacity=5,
         )
 
         # defines an AWS  Lambda resource
