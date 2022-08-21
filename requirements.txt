@@ -1,3 +1,4 @@
 aws-cdk-lib
 aws-sam-cli
 boto3
+aws-solutions-constructs.core
