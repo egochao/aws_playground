@@ -1,3 +1,7 @@
+# User define
+
+*dummy*
+
 !jest.config.js
 *.d.ts
 node_modules
