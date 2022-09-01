@@ -23,12 +23,15 @@ export class CognitoStack extends cdk.Stack {
 
         const userPoolClient = new cognito.UserPoolClient(this, 'UserPoolClient', {
             userPool,
-            userPoolClientName: 'static-web-app-user-pool',
+            userPoolClientName: 'static-web-app-user-pool-client',
             generateSecret: true
         });
-        // const userPoolDomain = new cognito.UserPoolDomain(this, 'UserPoolDomain', {
-        //     userPool,
-        //     domainName: 'UserPoolDomain'
-        // });
+
+        new cdk.CfnOutput(this, 'UserPoolId', {
+            value: userPool.userPoolId,
+        });
+        new cdk.CfnOutput(this, 'UserPoolClientId', {
+            value: userPoolClient.userPoolClientId,
+        });
     }
 }
