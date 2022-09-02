@@ -19,6 +19,7 @@ export class StaticWebStack extends cdk.Stack {
             }),
         });
         const masterBranch = amplifyApp.addBranch("master");
+        const developBranch = amplifyApp.addBranch("develop");
 
         new cdk.CfnOutput(this, 'secretName', {
             value: githubSecret.secretName,
