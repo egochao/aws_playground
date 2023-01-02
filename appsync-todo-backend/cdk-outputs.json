@@ -1,0 +1,9 @@
+{
+  "AppsyncTodoBackendStack": {
+    "UserPoolClientId": "6i8k5q15esdhaiikd9jbd163he",
+    "GraphQLAPIID": "7zangpvhdzccxe2xxz5brdxwai",
+    "UserPoolId": "ap-southeast-1_EWYysw4Rf",
+    "GraphQLAPIURL": "https://rumxbhum3redjj7jsb3jwugd6i.appsync-api.ap-southeast-1.amazonaws.com/graphql",
+    "GraphQLAPIKey": "da2-xrpj5wcv6bckzd5ssflpdg2hmq"
+  }
+}
